@@ -1,0 +1,32 @@
+These three CSV files are original LEBench text from one Ubuntu 22.04.5 boot.
+The kernel was 5.15.0-203-generic. GRUB was edited for that boot only, adding mitigations=off.
+All three runs finished before the machine was rebooted. Do not open the CSV files in Excel.
+
+cmdline.txt
+  Output of cat /proc/cmdline after boot.
+  It ends with mitigations=off.
+
+5.15.0-203-generic-mitigations-off-run1.csv
+  Copied from /home/tang/LEBenchoutput.5.15.0-203-generic.csv
+  Wall clock 1373.181163109 seconds. Finished 2026-11-20 14:36 guest time.
+
+5.15.0-203-generic-mitigations-off-run2.csv
+  Wall clock 1404.237026498 seconds. Finished 2026-11-20 15:13 guest time.
+
+5.15.0-203-generic-mitigations-off-run3.csv
+  Wall clock 1372.872371508 seconds. Finished 2026-11-20 15:39 guest time.
+
+summary.md
+  Mean and sample standard deviation of these three runs, compared with the
+  three default 5.15 runs already stored in week2/three-runs/.
+  Ratio = mitigations=off mean / default mean. Below 1 means mitigations=off is faster.
+
+wallclock.txt
+  The three total times above.
+
+Guest archive: /home/tang/lebench-mitigations-off.tar.gz
+Size: 3306 bytes
+SHA-256: ce0fcf842f54247c84bb08ad114d10c14ba009090d850f59170feec0167b8aea
+
+The default 5.15 logs are already in the repository at week2/three-runs/.
+Do not replace those files with these ones.

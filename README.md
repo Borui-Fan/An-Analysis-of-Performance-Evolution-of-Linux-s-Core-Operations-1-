@@ -35,6 +35,12 @@ This week we ran LEBench in our Ubuntu 22.04.5 VirtualBox guest. TANG SHIHENG (1
 
 Linux 4.4.302 and 4.15.18 were compiled and installed in this guest. Both stop at `Loading initial ramdisk`, so they have no LEBench results. These two kernels will not be rebuilt in the same virtual machine. Another group member will try them on a different machine.
 
+## Third week (11/16-11/22)
+
+This week we finished the one-factor extension. The kernel stayed `5.15.0-203-generic`. The only change was the boot parameter `mitigations=off`, added in GRUB for that boot. All three runs finished before the guest was rebooted. The mean wall-clock time is 1383.43 ± 18.02 seconds, compared with 1629.37 ± 16.23 seconds for the three default 5.15 runs from week 2. On the mean of the three `kbest` values, turning mitigations off is faster on 36 of 42 tests. The median ratio is 0.81. The logs and the full table are in `week3/mitigations-off/`.
+
+This supports the claim that security mitigations slow these core operations, on this VirtualBox guest and for this one boot parameter. It does not reproduce the paper's 11 separate changes. Figure 1 is still open, because 4.4.302 and 4.15.18 still do not boot here.
+
 ## How to run LEBench on our guest
 
 The guest is Ubuntu 22.04.5 in VirtualBox. From the LEBench directory:

@@ -98,6 +98,6 @@ This week shows a smaller claim. On one virtual machine, with Ubuntu's own kerne
 
 ## Still open
 
-The three runs for 5.15 and 6.8 are done. The extension is not. The plan is to repeat LEBench on 5.15 with one boot setting changed, `mitigations=off`, and compare it with the three default runs above.
+The three runs for 5.15 and 6.8 above are unchanged. The one-factor extension is in `week3/mitigations-off/`: the same 5.15 kernel with `mitigations=off`.
 
 `context siwtch` is the label LEBench prints. The table keeps that spelling so each row matches the CSV.

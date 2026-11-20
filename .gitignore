@@ -8,3 +8,4 @@ __pycache__/
 *.csv
 !week2/results/*.csv
 !week2/three-runs/*.csv
+!week3/mitigations-off/*.csv
