@@ -1,0 +1,21 @@
+# Week 4: reproducibility and evidence integrity
+
+## Contribution
+
+This week adds a lightweight audit for the experiment evidence already stored in the repository. It checks the six Week 2 CSV logs (three runs for each booting kernel) and the three Week 3 `mitigations=off` logs. It verifies each log's kernel label, checks that the `kbest` test names and their order agree across runs, checks that the Week 3 boot command line records `mitigations=off`, and confirms that three Week 3 wall-clock records are present.
+
+The audit also calculates a SHA-256 fingerprint for every input CSV and writes `reproducibility_report.md`. This makes it easier to detect accidental changes to the archived evidence before regenerating or discussing results.
+
+## Run
+
+From the repository root, with Python 3.10 or newer:
+
+```bash
+python week4/reproducibility_check.py
+```
+
+No third-party Python packages are required. A successful run prints the checks and updates `week4/reproducibility_report.md`. A missing file, unexpected kernel label, inconsistent test list, missing `mitigations=off` record, or wrong number of wall-clock records causes a non-zero exit status.
+
+## Scope and limitations
+
+This is an integrity and consistency check, not a new LEBench run. It does not change the original CSV files or previous-week summaries, install or boot kernels, or claim to independently verify the machine configuration. Hashes identify the exact files inspected; they do not prove how the measurements were produced. The Week 2 and Week 3 source notes remain the provenance records for those experiments.
