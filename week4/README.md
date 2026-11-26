@@ -1,6 +1,6 @@
-# Week 4: reproducibility and evidence integrity（by Wu Hat）
+# Week 4: reproducibility and evidence integrity（by Wu Hao）
 
-## Contribution
+## Contributionhttps://github.com/Borui-Fan/An-Analysis-of-Performance-Evolution-of-Linux-s-Core-Operations-1-/blob/main/week4/README.md
 
 This week adds a lightweight audit for the experiment evidence already stored in the repository. It checks the six Week 2 CSV logs (three runs for each booting kernel) and the three Week 3 `mitigations=off` logs. It verifies each log's kernel label, checks that the `kbest` test names and their order agree across runs, checks that the Week 3 boot command line records `mitigations=off`, and confirms that three Week 3 wall-clock records are present.
 
