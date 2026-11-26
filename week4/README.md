@@ -1,4 +1,4 @@
-# Week 4: reproducibility and evidence integrity（by Wu Has）
+# Week 4: reproducibility and evidence integrity（by Wu Hat）
 
 ## Contribution
 
@@ -37,6 +37,10 @@ Reproduce the baseline kernel v4.0.5 and kernel v4.15.0-112 from the paper Figur
 Boot successfully
 OS_Eval completed, CSV output generated
 
+## Limitations
+1. This experiment runs on VirtualBox VM, not the original physical Xeon E5 server from the paper. Virtualization overhead exists.
+2. Only two kernel versions are tested, not the full set of 36 kernels in the original paper. This is a reduced-scale reproduction.
+
 
 ## Run command
 ```bash
@@ -45,7 +49,3 @@ cd ~/LEBench
 # After run, rename csv to avoid overwrite
 cp output.4.0.5-040005-generic.csv raw_csv/output.4.0.5-040005-generic_run1.csv
 
-## Limitations
-
-1. This experiment runs on VirtualBox VM, not the original physical Xeon E5 server from the paper. Virtualization overhead exists.
-2. Only two kernel versions are tested, not the full set of 36 kernels in the original paper. This is a reduced-scale reproduction.
