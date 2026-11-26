@@ -1,4 +1,4 @@
-# Week 4: reproducibility and evidence integrity（by 吴浩）
+# Week 4: reproducibility and evidence integrity（by Wu Has）
 
 ## Contribution
 
@@ -20,7 +20,7 @@ No third-party Python packages are required. A successful run prints the checks 
 
 This is an integrity and consistency check, not a new LEBench run. It does not change the original CSV files or previous-week summaries, install or boot kernels, or claim to independently verify the machine configuration. Hashes identify the exact files inspected; they do not prove how the measurements were produced. The Week 2 and Week 3 source notes remain the provenance records for those experiments.
 
-# Week4 Experiment: Ubuntu16.04 VirtualBox VM（by 范博睿）
+# Week4 Experiment: Ubuntu16.04 VirtualBox VM（by Fan Borui）
 ## Goal
 Reproduce the baseline kernel v4.0.5 and kernel v4.15.0-112 from the paper Figure 1.
 - v4.0.5: baseline, without KPTI / Spectre mitigations
@@ -44,6 +44,7 @@ cd ~/LEBench
 ./OS_Eval
 # After run, rename csv to avoid overwrite
 cp output.4.0.5-040005-generic.csv raw_csv/output.4.0.5-040005-generic_run1.csv
+
 ## Limitations
 
 1. This experiment runs on VirtualBox VM, not the original physical Xeon E5 server from the paper. Virtualization overhead exists.
